@@ -133,7 +133,32 @@ input {
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  background-color: #d6678a;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.btn-login:hover {
+  background-color: #c35476;
+}
+.signup-link {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  display: block;
+  color: rgb(167, 165, 165);
+  text-align: center;
+}
+.signup-link a {
+  color: #d6678a;
+  font-weight: bold;
+  text-decoration: none;
+}
 .btn:hover {
   background-color: #d6678a;
 }
