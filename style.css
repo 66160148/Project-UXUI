@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8d6e3;
+      color: #b64275;
+    }
+    .welcome-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .welcome-title {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      margin-bottom: 10px;
+    }
+    .welcome-subtitle {
+      font-size: 3rem;
+      font-weight: bolder;
+      margin-bottom: 5px;
+    }
+    .welcome-image {
+      width: 300px;
+      height: auto;
+      margin-bottom: 40px;
+    }
+    .start-btn {
+      padding: 12px 24px;
+      font-size: 2rem;
+      color: #ffffff;
+      background-color: #e07b9e;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .start-btn:hover {
+      background-color: #d6678a;
+    }
+    .container {
+      width: 100%;
+      max-width: 390px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius:30px;
+      text-align: center;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .header-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+    }
+    .calendar {
+        width: 100%;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: white;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .profile-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #e07b9e;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .btn:hover {
+      background-color: #d6678a;
+    }
+    .btn.green {
+      background-color: #7bc67b;
+    }
+    .btn.green:hover {
+      background-color: #6aa96a;
+    }
