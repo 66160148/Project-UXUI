@@ -1,0 +1,36 @@
+body {
+    background-color: #ffe4e6;
+    text-align: center;
+}
+
+.welcome-title {
+    color: #db2777;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.app-name {
+    color: #be185d;
+    font-weight: 800;
+    font-size: 1.875rem;
+}
+
+.cloud-mascot {
+    width: 20rem;
+    height: 18rem;
+}
+
+.start-button {
+    background-color: #ec4899;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    padding: 1.5rem 2.5rem;
+    border-radius: 9999px;
+    transition: background-color 0.3s;
+}
+
+.start-button:hover {
+    background-color: #db2777;
+}
