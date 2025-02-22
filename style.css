@@ -1,19 +1,27 @@
 body {
-    background-color: #ffe4e6;
-    text-align: center;
+    margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8d6e3;
+      color: #b64275;
 }
 
 .welcome-title {
     color: #db2777;
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-weight: bolder;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .app-name {
     color: #be185d;
-    font-weight: 800;
-    font-size: 1.875rem;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 .cloud-mascot {
@@ -28,7 +36,7 @@ body {
     font-size: large;
     padding: 1.5rem 2.5rem;
     border-radius: 9999px;
-    transition: background-color 0.3s;
+    text-align: center;
 }
 
 .start-button:hover {
