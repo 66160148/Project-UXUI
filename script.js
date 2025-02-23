@@ -3,10 +3,14 @@ const monthNames = [
     "July", "August", "September", "October", "November", "December"
 ];
 
-let currentDate = new Date(2025, 1); // เริ่มต้นที่ February 2025
+let currentDate = new Date(2025, 1); 
 
 function renderCalendar(date) {
     const calendarElement = document.getElementById("calendar");
+    const monthYearElement = document.getElementById("monthYear"); // อ้างอิง <h2>
+
+    // แสดงชื่อเดือนและปี
+    monthYearElement.textContent = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
 
     // คำนวณวันที่
     const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
@@ -50,4 +54,6 @@ function nextMonth() {
 }
 
 // เริ่มต้นแสดงปฏิทิน
-renderCalendar(currentDate);
+document.addEventListener("DOMContentLoaded", () => {
+    renderCalendar(currentDate);
+});
