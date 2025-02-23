@@ -48,7 +48,7 @@ h1 {
 
 .container {
     width: 100%;
-    max-width: 390px;
+    max-width: 400px;
     background-color: #ffe4ec;
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -57,23 +57,22 @@ h1 {
 }
 
 .header {
-    position: relative;
+    position: top;
     width: 100%;
-    height: 120px;
-    background-image: url('image/Back.png');
-    /* แทนด้วยรูปภูเขา */
+    height: 150px;
+    background-image: url('image/Backgroud.png');
     background-size: cover;
-    background-position: center;
+    background-position: left;
 }
 
 .header-icons {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: absolute; 
+    top: 15px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     width: 100%;
-    padding: 0 10px;
+    z-index: 1000;
 }
 
 .icon {
@@ -85,13 +84,14 @@ h1 {
 .profile {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: -30px;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
 .profile img {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 3px solid #ffe4ec;
 }
@@ -129,7 +129,7 @@ h1 {
     max-width: 300px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     background-color: white;
 }
 
