@@ -4,11 +4,12 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow-y: auto;
 }
 
 .container {
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,33 +51,23 @@ h2{
     background-color: #B53E60;
 }
 
-.container {
-    width: 100%;
-    max-width: 400px;
-    background-color: #ffe4ec;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-}
-
 .header {
     position: top;
     width: 100%;
-    height: 150px;
-    background-image: url('image/Backgroud.png');
-    background-size: cover;
-    background-position: left;
+    padding: 10px 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b3375a;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    text-align: center;
+    z-index: 1000
 }
-
-.header-icons {
-    position: absolute; 
-    top: 15px;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    z-index: 1000;
+.banner {
+    width: 110%;
+    height: 200px;
+    background: url('image/Backgroud.png') no-repeat center/cover;
 }
 
 .icon {
@@ -89,6 +80,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    width: 90%;
     margin-top: 10px;
 }
 
@@ -97,6 +89,7 @@ h2{
     height: 40px;
     border-radius: 50%;
     border: 3px solid #ffe4ec;
+    
 }
 
 .profile-name {
@@ -117,7 +110,7 @@ h2{
     color: #ffffff;
     border: none;
     padding: 10px; 
-    border-radius: 50%;
+    border-radius: 100%;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: bold;
@@ -139,7 +132,7 @@ h2{
 .btn {
     display: block;
     width: 70%;
-    padding: 15px;
+    padding: 10px;
     font-size: 1rem;
     color: #ffffff;
     background-color: #e07b9e;
@@ -147,13 +140,92 @@ h2{
     border-radius: 30px;
     cursor: pointer;
     text-decoration: none;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .btn.green {
     background-color: #7bc67b;
+    margin-top: 20px;
 }
 
 .btn.green:hover {
     background-color: #6aa96a;
+}
+/* ป็อปอัปพื้นหลัง */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* กล่องป็อปอัป */
+.popup-content {
+    background-color: white;
+    width: 90%;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* ปุ่มปิด */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* กรอบอินพุต */
+.input-group {
+    text-align: left;
+    margin: 10px 10px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #FFC0CB;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* ปุ่มแสดง/ซ่อนรหัสผ่าน */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 10px;
+}
+
+.toggle-password {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ff8cac;
 }

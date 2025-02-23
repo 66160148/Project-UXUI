@@ -57,3 +57,27 @@ function nextMonth() {
 document.addEventListener("DOMContentLoaded", () => {
     renderCalendar(currentDate);
 });
+
+function goToLogin() {
+    window.location.href = "login.html";
+  }
+
+  // เปิดป็อปอัป
+function openPopup() {
+    document.getElementById("loginPopup").style.display = "flex";
+}
+
+// ปิดป็อปอัป
+function closePopup() {
+    document.getElementById("loginPopup").style.display = "none";
+}
+
+// แสดง/ซ่อนรหัสผ่าน
+function togglePassword() {
+    var passwordField = document.getElementById("password");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+}

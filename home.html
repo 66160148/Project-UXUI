@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlanPao - Home</title>
   <link rel="stylesheet" href="style.css">
-  
 </head>
+
 <body>
   <div class="container">
-    <div class="header">
-      <div class="header-icons">
-        <img src="image/back.png" alt="Back" class="icon">
-        <img src="image/setting.png" alt="Settings" class="icon">
-      </div>
-    </div>
-    <div class="profile">
-      <img src="image/user.png" alt="Profile Picture">
-      <span class="profile-name">เข้าสู่ระบบ</span>
+    <div class="header">PlanPao</div>
+    <div class="banner"></div>
+    <div class="profile" onclick="openPopup()">
+      <img src="image/user.png" alt="User Profile">
+      <span>เข้าสู่ระบบ</span>
     </div>
     <h2 id="monthYear"></h2>
     <div class="calendar-container">
@@ -29,6 +26,27 @@
     <a href="#" class="btn">+ New Group</a>
   </div>
 
+  <div id="loginPopup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>เข้าสู่ระบบ</h2>
+      <form>
+        <div class="input-group">
+          <label for="username">ชื่อผู้ใช้</label>
+          <input type="text" id="username" required>
+        </div>
+        <div class="input-group">
+          <label for="password">รหัสผ่าน</label>
+          <div class="password-container">
+            <input type="password" id="password" required>
+            <button type="button" class="toggle-password" onclick="togglePassword()">👁</button>
+          </div>
+        </div>
+        <button type="submit" class="btn">เข้าสู่ระบบ</button>
+      </form>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
+
 </html>
