@@ -134,6 +134,11 @@ h2{
     border-radius: 10px;
     padding: 20px;
     background-color: white;
+    letter-spacing: 1px;
+}
+.calendar td {
+    padding: 5px;
+    text-align: center;
 }
 
 .btn {
@@ -169,7 +174,6 @@ h2{
     height: 100%;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
