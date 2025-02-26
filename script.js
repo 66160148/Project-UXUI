@@ -81,3 +81,50 @@ function togglePassword() {
         passwordField.type = "password";
     }
 }
+
+function goBack() {
+  window.history.back();
+}
+
+function openSettings() {
+  alert("เปิดการตั้งค่า");
+}
+
+function changeProfilePic() {
+  alert("เปลี่ยนรูปโปรไฟล์");
+}
+
+function editName() {
+  let newName = prompt("กรอกชื่อใหม่:", document.getElementById("name").innerText);
+  if (newName) document.getElementById("name").innerText = newName;
+}
+
+function editPhone() {
+  let newPhone = prompt("กรอกเบอร์โทรใหม่:", document.getElementById("phone").innerText);
+  if (newPhone) document.getElementById("phone").innerText = newPhone;
+}
+
+function toggleAccordion(btn) {
+  let panel = btn.nextElementSibling;
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+}
+
+function deleteTrip(btn) {
+  if (confirm("คุณต้องการลบแผนที่นี้ใช่หรือไม่?")) {
+    btn.parentElement.remove();
+  }
+}
+
+function changePassword() {
+  alert("เปลี่ยนรหัสผ่าน");
+}
+
+function confirmDeleteAccount() {
+  if (confirm("คุณแน่ใจหรือไม่ว่าต้องการลบบัญชี?")) {
+    alert("บัญชีถูกลบแล้ว");
+  }
+}
+
+function logout() {
+  alert("ออกจากระบบ");
+}
