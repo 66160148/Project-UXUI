@@ -1,4 +1,5 @@
 body {
+    padding-top: 50px;
     font-family: Arial, sans-serif;
     background-color: #FFDCE5;
     text-align: center;
@@ -47,6 +48,12 @@ h2 {
     cursor: pointer;
 }
 
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* ระยะห่างระหว่างปุ่ม */
+  }
+
 .button:hover {
     background-color: #B53E60;
 }
@@ -63,7 +70,7 @@ h2 {
 }
 
 .login-btn:hover {
-    background-color: #0056b3;
+    background-color: #D6718C;
 }
 
 .header {
@@ -256,9 +263,12 @@ span {
 }
 
 .toggle-password {
-    position: relative;
+    position: absolute;
     background: none;
     border: none;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
     font-size: 16px;
     color: #ff8cac;

@@ -74,13 +74,18 @@ function closePopup() {
 
 // แสดง/ซ่อนรหัสผ่าน
 function togglePassword() {
-    var passwordField = document.getElementById("password");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-    } else {
-        passwordField.type = "password";
-    }
+  let passwordInput = document.getElementById("password");
+  let toggleButton = document.querySelector(".toggle-password");
+
+  if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.innerHTML = "🙈"; // เปลี่ยนเป็นไอคอนปิดตา
+  } else {
+      passwordInput.type = "password";
+      toggleButton.innerHTML = "👁"; // เปลี่ยนเป็นไอคอนเปิดตา
+  }
 }
+
 
 function goBack() {
   window.history.back();
@@ -128,3 +133,17 @@ function confirmDeleteAccount() {
 function logout() {
   alert("ออกจากระบบ");
 }
+
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // ป้องกันการโหลดหน้าใหม่
+  
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  
+  // ตัวอย่าง: ตรวจสอบ username และ password
+  if (username === "SmileZ" && password === "1234") {
+      window.location.href = "home2.html"; // เปลี่ยนไปยังหน้าถัดไป
+  } else {
+      alert("ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง");
+  }
+});
