@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #FFDCE5;
     text-align: center;
     margin: 0;
@@ -18,12 +18,15 @@ body {
 }
 
 h1 {
-    color: #B53E60;
+    color: #fa2864;
     font-size: 25px;
 }
 
 h2 {
     font-size: large;
+    color: #e07b9e;
+    font-weight: bold;
+    text-align: center;
 }
 
 .title {
@@ -120,11 +123,14 @@ h2 {
     height: 50px;
     border-radius: 50%;
     border: 3px solid #ffe4ec;
-
+    margin-right: 10px;
 }
 
-span {
-    font-family: Arial, sans-serif;
+.profile span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #B53E60; /* สีตัวอักษร */
+    font-family: 'Poppins', sans-serif;
 }
 
 .profile-name {
@@ -163,9 +169,11 @@ span {
     padding: 20px;
     background-color: white;
     letter-spacing: 1px;
+    color: #e07b9e
 }
 
 .calendar td {
+    color: #e07b9e;
     padding: 5px;
     text-align: center;
 }
