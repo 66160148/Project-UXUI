@@ -148,3 +148,84 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const calendar = document.getElementById("calendar");
+  const selectAvailability = document.getElementById("availability");
+
+  // กำหนดเดือนและจำนวนวันในแต่ละเดือน
+  const months = [
+      { name: "มกราคม", days: 31 },
+      { name: "กุมภาพันธ์", days: 28 },
+      { name: "มีนาคม", days: 31 },
+      { name: "เมษายน", days: 30 },
+      { name: "พฤษภาคม", days: 31 },
+      { name: "มิถุนายน", days: 30 },
+      { name: "กรกฎาคม", days: 31 },
+      { name: "สิงหาคม", days: 31 },
+      { name: "กันยายน", days: 30 },
+      { name: "ตุลาคม", days: 31 },
+      { name: "พฤศจิกายน", days: 30 },
+      { name: "ธันวาคม", days: 31 }
+  ];
+
+  function populateDateOptions() {
+      selectAvailability.innerHTML = ""; // ล้างตัวเลือกเก่าก่อน
+
+      months.forEach((month, monthIndex) => {
+          for (let i = 1; i <= month.days; i++) {
+              let option = document.createElement("option");
+              option.value = `${i}-${monthIndex + 1}`; // ใช้รูปแบบ "วันที่-เดือน"
+              option.textContent = `${i} ${month.name}`;
+              selectAvailability.appendChild(option);
+          }
+      });
+  }
+
+  populateDateOptions(); // เรียกใช้งานตอนโหลดหน้า
+
+  // เมื่อเลือกวันที่จาก select
+  selectAvailability.addEventListener("change", function () {
+      let selectedValue = selectAvailability.value.split("-");
+      let selectedDate = parseInt(selectedValue[0]); // วันที่
+      let selectedMonth = parseInt(selectedValue[1]); // เดือน (1-12)
+
+      let days = calendar.getElementsByTagName("td");
+
+      // ลบรูปเก่าถ้ามี
+      for (let day of days) {
+          if (parseInt(day.innerText) === selectedDate) {
+              let existingImg = day.querySelector("img");
+              if (existingImg) {
+                  existingImg.remove();
+              }
+
+              // เพิ่มรูปภาพ
+              let userImg = document.createElement("img");
+              userImg.src = "image/1-4.jpg";
+              userImg.alt = "User";
+              userImg.classList.add("calendar-avatar");
+              day.appendChild(userImg);
+              break;
+          }
+      }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectAvailability = document.getElementById("availability");
+
+  function populateDateOptions() {
+      selectAvailability.innerHTML = ""; // เคลียร์ตัวเลือกก่อนเพิ่มใหม่
+
+      for (let month = 1; month <= 12; month++) {
+          for (let day = 1; day <= 31; day++) {
+              let option = document.createElement("option");
+              option.value = `${day}-${month}`;
+              option.textContent = `${day} / ${month}`;
+              selectAvailability.appendChild(option);
+          }
+      }
+  }
+
+  populateDateOptions();
+});

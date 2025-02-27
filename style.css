@@ -301,7 +301,12 @@ h2 {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+.calendar-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    margin: 3px auto 0;
 }

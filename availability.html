@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlanPao - Availability</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
-        PlanPao
-        <div class="settings-icon" onclick="openSettings()">⚙️</div>
-      </div>
-      <h1>Availability</h1>
-      <h2 id="monthYear"></h2>
-      <div class="calendar-container">
-          <button class="btn-nav" onclick="previousMonth()">&#8592;</button>
-          <div class="calendar" id="calendar"></div>
-          <button class="btn-nav" onclick="nextMonth()">&#8594;</button>
-      </div>
+      PlanPao
+      <div class="settings-icon" onclick="openSettings()">⚙️</div>
+    </div>
+    <h1>Availability Calendar</h1>
+    <h2 id="monthYear"></h2>
+    <div class="calendar-container">
+      <button class="btn-nav" onclick="previousMonth()">&#8592;</button>
+      <div class="calendar" id="calendar"></div>
+      <button class="btn-nav" onclick="nextMonth()">&#8594;</button>
+    </div>
     <div class="form-group">
+      <label for="availability">เลือกวันของคุณ:</label>
+      <select id="availability">
+        <!-- ตัวเลือกวันที่จะถูกเพิ่มโดย JavaScript -->
+      </select>
       <label for="availability">ระบุสถานะ</label>
       <select id="availability">
         <option value="ว่าง">ว่าง</option>
@@ -34,4 +40,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
