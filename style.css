@@ -194,13 +194,16 @@ h2 {
 
 .btn.green {
     background-color: #7bc67b;
-    margin-top: 20px;
 }
 
 .btn.green:hover {
     background-color: #6aa96a;
 }
 
+.form-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 /* ป็อปอัปพื้นหลัง */
 .popup {
     display: none;
@@ -289,4 +292,16 @@ h2 {
 .green {
     background: green;
     color: white;
+}
+
+.buttons button {
+    width: 150px; /* กำหนดขนาดปุ่มให้เท่ากัน */
+    height: 50px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
