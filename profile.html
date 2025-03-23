@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanPao Profile</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn" onclick="goBack()">&#8592;</button>
+            <h1>PlanPao</h1>
+            <button class="settings-btn" onclick="openSettings()">⚙️</button>
+        </header>
+
+        <div class="profile">
+            <img src="image/1-4.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>SmileZ <button class="edit-btn">✏️</button></h2>
+        </div>
+
+        <div class="menu">
+            <button class="menu-item">ข้อมูลส่วนตัว</button>
+            <button class="menu-item">แผนที่ฉันสร้าง</button>
+            <button class="menu-item">แผนที่เข้าร่วม</button>
+            <button class="menu-item">การตั้งค่าบัญชี</button>
+            <button class="menu-item" onclick="confirmLogout()">Log Out</button>
+            <button class="delete-account">Delete Account</button>
+        </div>
+
+        <!-- Popup ยืนยัน Log Out -->
+        <div class="popup" id="logoutPopup">
+            <p>คุณแน่ใจหรือไม่ว่าต้องการออกจากระบบ?</p>
+            <button class="cancel-btn" onclick="closePopup()">ยกเลิก</button>
+            <button class="confirm-btn">ยืนยัน</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFD9E1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 0 auto;
+            /* จัดให้อยู่ตรงกลาง */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            background: transparent;
+            box-shadow: none;
+        }
+
+
+        .profile {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
+        .profile-pic {
+            width: 50px;
+            /* ลดขนาดรูปภาพให้เหมาะสม */
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #FF6699;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .edit-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .menu {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .menu-item {
+            background-color: #f7a2b6;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .delete-account {
+            background-color: #FF4D4D;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .popup button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-buttons {
+            display: flex;
+            justify-content: space-between;
+            /* หรือใช้ justify-content: center; */
+            gap: 10px;
+            /* กำหนดระยะห่างระหว่างปุ่ม */
+        }
+
+
+        .cancel-btn {
+            background: #FF4D4D;
+            color: white;
+        }
+
+        .confirm-btn {
+            background: #4CAF50;
+            color: white;
+        }
+    </style>
+</body>
+
+</html>

@@ -229,3 +229,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   populateDateOptions();
 });
+
+function goBack() {
+  window.history.back();
+}
+
+function openSettings() {
+  alert("เปิดการตั้งค่า");
+}
+
+function confirmLogout() {
+  document.getElementById("logoutPopup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("logoutPopup").style.display = "none";
+}
