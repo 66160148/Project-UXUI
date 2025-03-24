@@ -12,7 +12,7 @@
   <div class="container">
     <div class="header">
       PlanPao
-      <div class="settings-icon" onclick="openSettings()">⚙️</div>
+      <div class="settings-icon" onclick="goToProfile()">⚙️</div>
     </div>
     <h1>Availability Calendar</h1>
     <h2 id="monthYear"></h2>
@@ -23,9 +23,8 @@
     </div>
     <div class="form-group">
       <label for="selectDate">เลือกวันของคุณ:</label>
-      <select id="selectDate">
-        <!-- ตัวเลือกวันที่จะถูกเพิ่มโดย JavaScript -->
-      </select>
+      <select id="selectDate"></select> <!-- ตรวจสอบว่ามี ID นี้อยู่ -->
+
       <label for="selectStatus">ระบุสถานะ</label>
       <select id="selectStatus">
         <option value="ว่าง">ว่าง</option>

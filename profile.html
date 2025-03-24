@@ -12,7 +12,7 @@
         <header>
             <button class="back-btn" onclick="goBack()">&#8592;</button>
             <h1>PlanPao</h1>
-            <button class="settings-btn" onclick="openSettings()">⚙️</button>
+            <button class="settings-btn" onclick="goToProfile()">⚙️</button>
         </header>
 
         <div class="profile">
@@ -42,7 +42,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #FFD9E1;
-            text-align: center;
+            text-align: left;
             margin: 0;
             padding: 0;
         }
@@ -91,8 +91,14 @@
             border: 2px solid #FF6699;
         }
 
+        h1 {
+            color: #fa2864;
+            font-size: 30px;
+        }
+
         h2 {
             margin: 0;
+            color: #fa2864;
             font-size: 20px;
             display: flex;
             align-items: center;
@@ -114,12 +120,14 @@
         }
 
         .menu-item {
-            background-color: #f7a2b6;
+            background-color: #FFE6EC;
+            color: #fa2864;
             border: none;
             padding: 10px;
             border-radius: 10px;
             font-size: 16px;
             cursor: pointer;
+            text-align: left;
         }
 
         .delete-account {
@@ -169,6 +177,38 @@
         .confirm-btn {
             background: #4CAF50;
             color: white;
+        }
+
+        .settings-btn {
+            background: none;
+            /* เอาพื้นหลังออก */
+            border: none;
+            /* เอากรอบออก */
+            font-size: 20px;
+            /* ปรับขนาดไอคอน */
+            cursor: pointer;
+            /* ทำให้เป็นปุ่มกด */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            /* ปรับระยะห่างให้พอดี */
+        }
+
+        .back-btn {
+            background: none;
+            /* เอาพื้นหลังออก */
+            border: none;
+            /* เอากรอบออก */
+            font-size: 20px;
+            /* ปรับขนาดไอคอน */
+            cursor: pointer;
+            /* ทำให้เป็นปุ่มกด */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            /* ปรับระยะห่างให้พอดี */
         }
     </style>
 </body>

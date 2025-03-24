@@ -245,3 +245,32 @@ function confirmLogout() {
 function closePopup() {
   document.getElementById("logoutPopup").style.display = "none";
 }
+
+function goToProfile() {
+  window.location.href = 'profile.html'; // แก้เป็น URL ของหน้าที่ต้องการ
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  let selectDate = document.getElementById("selectDate");
+
+  // ตรวจสอบว่า selectDate มีอยู่จริงหรือไม่
+  if (!selectDate) {
+      console.error("ไม่พบ <select> ที่มี ID 'selectDate'");
+      return;
+  }
+
+  console.log("พบ <select> ที่มี ID 'selectDate'"); // เช็คว่ามีจริงหรือไม่
+
+  // ล้างตัวเลือกเก่า
+  selectDate.innerHTML = "<option value=''>-- เลือกวัน --</option>";
+
+  // เพิ่มวันที่ 1-31 ลงใน <select>
+  for (let i = 1; i <= 31; i++) {
+      let option = document.createElement("option");
+      option.value = i;
+      option.textContent = i;
+      selectDate.appendChild(option);
+  }
+
+  console.log("เพิ่มตัวเลือกวันที่เรียบร้อย");
+});
