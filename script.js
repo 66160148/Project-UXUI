@@ -274,3 +274,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
   console.log("เพิ่มตัวเลือกวันที่เรียบร้อย");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const selectDate = document.getElementById("selectDate");
+  const btnSave = document.getElementById("btnSave");
+  const calendar = document.getElementById("calendar");
+
+  if (!selectDate || !btnSave || !calendar) {
+      console.error("ไม่พบองค์ประกอบที่จำเป็น");
+      return;
+  }
+
+  btnSave.addEventListener("click", function () {
+      let selectedDate = parseInt(selectDate.value); // วันที่ที่เลือก
+      if (!selectedDate) {
+          alert("กรุณาเลือกวันที่");
+          return;
+      }
+
+      let days = calendar.getElementsByTagName("td");
+
+      for (let day of days) {
+          if (parseInt(day.innerText) === selectedDate) {
+              let existingImg = day.querySelector("img");
+              
+              if (!existingImg) {
+                  let userImg = document.createElement("img");
+                  userImg.src = "image/user-icon.png"; // เปลี่ยนเป็นรูปโปรไฟล์ของผู้ใช้
+                  userImg.alt = "User";
+                  userImg.classList.add("calendar-avatar");
+                  day.appendChild(userImg);
+              } else {
+                  console.log("มีรูปอยู่แล้ว");
+              }
+              break;
+          }
+      }
+  });
+});
